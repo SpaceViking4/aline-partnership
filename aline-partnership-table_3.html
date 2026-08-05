@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Root Signals × CohereOps — Partnership Framing</title>
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0d18;
+    color: #e0e0f0;
+    margin: 0;
+    padding: 32px;
+    font-size: 14px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .subtitle {
+    text-align: center;
+    color: #7a7a9a;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  th {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2a2a4a;
+  }
+  th.label-col { width: 14%; color: #7a7a9a; background: #0d0d18; }
+  th.revops-col { width: 43%; color: #a78bfa; background: #13132a; }
+  th.data-col { width: 43%; color: #34d399; background: #0d1f1a; }
+  tr.section-row td {
+    padding: 20px 18px;
+    vertical-align: top;
+    border-bottom: 1px solid #1e1e3a;
+  }
+  td.label {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7a7a9a;
+    padding-top: 22px;
+  }
+  td.revops { background: #13132a; border-left: 3px solid #a78bfa; padding-left: 20px; }
+  td.data   { background: #0d1f1a; border-left: 3px solid #34d399; padding-left: 20px; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .tag-revops { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .tag-data   { background: rgba(52,211,153,0.15);  color: #34d399; }
+  .positioning {
+    margin-top: 12px;
+    font-style: italic;
+    color: #a0a0c0;
+    font-size: 13px;
+    border-left: 2px solid #2a2a4a;
+    padding-left: 10px;
+  }
+  .positioning-data {
+    margin-top: 12px;
+    font-style: italic;
+    font-size: 13px;
+    border-left: 2px solid #1a3a2a;
+    padding-left: 10px;
+  }
+  p { margin: 0 0 8px 0; line-height: 1.6; }
+  .section-label-text { font-size: 13px; color: #5a5a7a; line-height: 1.5; }
+
+  /* DIFF STYLES */
+  .cut {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+    text-decoration: line-through;
+    text-decoration-color: #ef4444;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+  .added {
+    background: rgba(52, 211, 153, 0.18);
+    color: #6ee7b7;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+  .changed {
+    background: rgba(251, 146, 60, 0.18);
+    color: #fdba74;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Root Signals × CohereOps — Partnership Framing</h1>
+<div class="subtitle">Aline brings operational systems · Greg brings __ · Two framings compared</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div> Cut from RevOps version</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#34d399;"></div> Added in Data version</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fb923c;"></div> Wording changed</div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th class="label-col"></th>
+      <th class="revops-col">← RevOps Framing</th>
+      <th class="data-col">Data, Analytics &amp; Insight Framing →</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- NATURAL BUYER -->
+    <tr class="section-row">
+      <td class="label"><div class="section-label-text">Natural<br>Buyer</div></td>
+      <td class="revops">
+        <span class="tag tag-revops">RevOps</span>
+        <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their go-to-market at the same time.</p>
+        <p>Aline gets the internal house in order. Greg builds the revenue infrastructure — CRM, pipeline visibility, sales/marketing/CS alignment.</p>
+        <p><strong>She's the internal engine. Greg is the external growth system.</strong></p>
+      </td>
+      <td class="data">
+        <span class="tag tag-data">Data / Insight</span>
+        <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their <span class="changed">go-to-market → decision-making</span> at the same time.</p>
+        <p>Aline gets the internal house in order. Greg <span class="changed">builds the revenue infrastructure — CRM, pipeline visibility, sales/marketing/CS alignment → installs the analytics layer —</span> <span class="added">impact metrics, funnel data, stakeholder dashboards, and the insight infrastructure that tells the founder what's actually working.</span></p>
+        <p><strong>She's the internal engine. Greg is the <span class="changed">external growth system → intelligence system</span>.</strong></p>
+      </td>
+    </tr>
+
+    <!-- PACKAGE 1 -->
+    <tr class="section-row">
+      <td class="label"><div class="section-label-text">Package<br>One<br><br>"Mission<br>to Market"</div></td>
+      <td class="revops">
+        <span class="tag tag-revops">RevOps</span>
+        <p><strong>Full-Stack Readiness</strong> — for founders preparing to raise or just post-raise.</p>
+        <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the revenue infrastructure: CRM setup, lead lifecycle, outreach sequencing, pipeline visibility.</p>
+        <p>Deliverable: a founder who can walk into a Series A conversation with clean ops <em>and</em> a functioning GTM.</p>
+        <div class="positioning">"You're fundable. Now let's make you operable and scalable."</div>
+      </td>
+      <td class="data">
+        <span class="tag tag-data">Data / Insight</span>
+        <p><strong>Full-Stack Readiness</strong> — for founders preparing to raise or just post-raise.</p>
+        <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the <span class="changed">revenue infrastructure: CRM setup, lead lifecycle, outreach sequencing, pipeline visibility → data and metrics layer:</span> <span class="added">impact KPIs, a founder dashboard, funnel analytics, and a data story the founder can walk into a Series A conversation with confidence.</span></p>
+        <p>Deliverable: a founder with clean ops <em>and</em> a <span class="changed">functioning GTM → clear, defensible data narrative for investors and partners</span>.</p>
+        <div class="positioning-data"><span class="changed">"You're fundable. Now let's make you operable and scalable." → "You're fundable. Now let's give you the data to prove it."</span></div>
+      </td>
+    </tr>
+
+    <!-- PACKAGE 2 -->
+    <tr class="section-row">
+      <td class="label"><div class="section-label-text">Package<br>Two<br><br>"Growth<br>Without<br>the Fires"</div></td>
+      <td class="revops">
+        <span class="tag tag-revops">RevOps</span>
+        <p><strong>Fractional RevOps + Ops</strong> — ongoing retainer, 3–6 months.</p>
+        <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg at a matching scope. Weekly syncs between both so nothing falls between ops and GTM. The client gets one integrated team, not two consultants who don't talk.</p>
+        <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
+        <div class="positioning">"One integrated fractional team. No coordination tax for you."</div>
+      </td>
+      <td class="data">
+        <span class="tag tag-data">Data / Insight</span>
+        <p><strong><span class="changed">Fractional RevOps + Ops → Fractional Ops + Analytics</span></strong> — ongoing retainer, 3–6 months.</p>
+        <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg <span class="changed">at a matching scope → embedded as the analytics and insight partner</span>. Weekly syncs between both so <span class="changed">nothing falls between ops and GTM → operational improvements are measured and visible</span>. The client gets <span class="changed">one integrated team, not two consultants who don't talk → clean systems <em>and</em> a feedback loop that shows whether those systems are moving the needle</span>.</p>
+        <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
+        <div class="positioning-data"><span class="changed">"One integrated fractional team. No coordination tax for you." → "One integrated fractional team. Your ops get smarter as the data comes in."</span></div>
+      </td>
+    </tr>
+
+    <!-- PACKAGE 3 -->
+    <tr class="section-row">
+      <td class="label"><div class="section-label-text">Package<br>Three<br><br>"Sector<br>Sprint"</div></td>
+      <td class="revops">
+        <span class="tag tag-revops">RevOps</span>
+        <p><strong>Targeted Engagements for Cohorts</strong> — accelerators, CleanTech Open, food systems cohort programs.</p>
+        <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a RevOps/GTM audit. Each startup gets a prioritized roadmap for both. Some convert to ongoing retainers.</p>
+        <p>Sold to accelerator program managers as a value-add for their cohort.</p>
+        <div class="positioning">"Two experts. One session. A clear path forward."</div>
+      </td>
+      <td class="data">
+        <span class="tag tag-data">Data / Insight</span>
+        <p><strong>Targeted Engagements for Cohorts</strong> — accelerators, CleanTech Open, food systems cohort programs.</p>
+        <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a <span class="changed">RevOps/GTM audit → data and metrics audit —</span> <span class="added">what are you measuring, what are you missing, and what story does your data tell right now?</span> Each startup leaves with a prioritized roadmap for both. Some convert to ongoing retainers.</p>
+        <p>Sold to accelerator program managers as a value-add for their cohort.</p>
+        <div class="positioning-data"><span class="changed">"Two experts. One session. A clear path forward." → "Two experts. One session. You leave knowing what to fix and what to measure."</span></div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
