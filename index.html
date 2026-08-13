@@ -23,17 +23,8 @@
     text-align: center;
     color: #7a7a9a;
     font-size: 13px;
-    margin-bottom: 16px;
-  }
-  .legend {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
     margin-bottom: 28px;
-    font-size: 12px;
   }
-  .legend-item { display: flex; align-items: center; gap: 6px; }
-  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
   table {
     width: 100%;
     border-collapse: collapse;
@@ -89,34 +80,13 @@
   .positioning-data {
     margin-top: 12px;
     font-style: italic;
+    color: #e0e0f0;
     font-size: 13px;
     border-left: 2px solid #1a3a2a;
     padding-left: 10px;
   }
   p { margin: 0 0 8px 0; line-height: 1.6; }
   .section-label-text { font-size: 13px; color: #5a5a7a; line-height: 1.5; }
-
-  /* DIFF STYLES */
-  .cut {
-    background: rgba(239, 68, 68, 0.18);
-    color: #fca5a5;
-    text-decoration: line-through;
-    text-decoration-color: #ef4444;
-    border-radius: 3px;
-    padding: 0 2px;
-  }
-  .added {
-    background: rgba(52, 211, 153, 0.18);
-    color: #6ee7b7;
-    border-radius: 3px;
-    padding: 0 2px;
-  }
-  .changed {
-    background: rgba(251, 146, 60, 0.18);
-    color: #fdba74;
-    border-radius: 3px;
-    padding: 0 2px;
-  }
 
   /* DROPDOWN STYLES */
   .pkg-toggle {
@@ -138,10 +108,7 @@
     letter-spacing: 0.04em;
   }
   .pkg-toggle-btn:hover { background: rgba(52,211,153,0.08); }
-  .pkg-toggle-btn .arrow {
-    display: inline-block;
-    transition: transform 0.2s;
-  }
+  .pkg-toggle-btn .arrow { display: inline-block; transition: transform 0.2s; }
   .pkg-toggle-btn.open .arrow { transform: rotate(180deg); }
   .pkg-details {
     display: none;
@@ -178,40 +145,22 @@
     align-items: baseline;
     justify-content: space-between;
   }
-  .pkg-price-amount {
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-  }
-  .pkg-price-note {
-    font-size: 11px;
-    color: #5a5a7a;
-  }
-  .pkg-tagline {
-    margin-top: 10px;
-    font-style: italic;
-    font-size: 12px;
-    color: #34d399;
-  }
+  .pkg-price-amount { font-size: 14px; font-weight: 700; color: #ffffff; }
+  .pkg-price-note { font-size: 11px; color: #5a5a7a; }
+  .pkg-tagline { margin-top: 10px; font-style: italic; font-size: 12px; color: #34d399; }
 </style>
 </head>
 <body>
 
 <h1>Root Signals × CohereOps — Partnership Framing</h1>
-<div class="subtitle">Aline brings operational systems · Greg brings data, analytics &amp; insight · Two framings compared</div>
-
-<div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div> Cut from RevOps version</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#34d399;"></div> Added in Data version</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#fb923c;"></div> Wording changed</div>
-</div>
+<div class="subtitle">Aline brings operational systems · Greg brings data, analytics &amp; insight</div>
 
 <table>
   <thead>
     <tr>
       <th class="label-col"></th>
-      <th class="revops-col">← RevOps Framing</th>
-      <th class="data-col">Data, Analytics &amp; Insight Framing →</th>
+      <th class="revops-col">RevOps Framing</th>
+      <th class="data-col">Data, Analytics &amp; Insight Framing</th>
     </tr>
   </thead>
   <tbody>
@@ -227,9 +176,9 @@
       </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
-        <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their <span class="changed">go-to-market → decision-making</span> at the same time.</p>
-        <p>Aline gets the internal house in order. Greg <span class="changed">builds the revenue infrastructure — CRM, pipeline visibility, sales/marketing/CS alignment → installs the analytics layer —</span> <span class="added">impact metrics, funnel data, stakeholder dashboards, and the insight infrastructure that tells the founder what's actually working.</span></p>
-        <p><strong>She's the internal engine. Greg is the <span class="changed">external growth system → intelligence system</span>.</strong></p>
+        <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their decision-making at the same time.</p>
+        <p>Aline gets the internal house in order. Greg installs the analytics layer — impact metrics, funnel data, stakeholder dashboards, and the insight infrastructure that tells the founder what's actually working.</p>
+        <p><strong>She's the internal engine. Greg is the intelligence system.</strong></p>
       </td>
     </tr>
 
@@ -246,11 +195,10 @@
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p><strong>Full-Stack Readiness</strong> — for founders preparing to raise or just post-raise.</p>
-        <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the <span class="changed">revenue infrastructure: CRM setup, lead lifecycle, outreach sequencing, pipeline visibility → data and metrics layer:</span> <span class="added">impact KPIs, a founder dashboard, funnel analytics, and a data story the founder can walk into a Series A conversation with confidence.</span></p>
-        <p>Deliverable: a founder with clean ops <em>and</em> a <span class="changed">functioning GTM → clear, defensible data narrative for investors and partners</span>.</p>
-        <div class="positioning-data"><span class="changed">"You're fundable. Now let's make you operable and scalable." → "You're fundable. Now let's give you the data to prove it."</span></div>
+        <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the data and metrics layer: impact KPIs, a founder dashboard, funnel analytics, and a data story the founder can walk into a Series A conversation with confidence.</p>
+        <p>Deliverable: a founder with clean ops <em>and</em> a clear, defensible data narrative for investors and partners.</p>
+        <div class="positioning-data">"You're fundable. Now let's give you the data to prove it."</div>
 
-        <!-- DROPDOWN P1 -->
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg1', this)">
             <span class="arrow">▼</span> Package Details
@@ -290,12 +238,11 @@
       </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
-        <p><strong><span class="changed">Fractional RevOps + Ops → Fractional Ops + Analytics</span></strong> — ongoing retainer, 3–6 months.</p>
-        <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg <span class="changed">at a matching scope → embedded as the analytics and insight partner</span>. Weekly syncs between both so <span class="changed">nothing falls between ops and GTM → operational improvements are measured and visible</span>. The client gets <span class="changed">one integrated team, not two consultants who don't talk → clean systems <em>and</em> a feedback loop that shows whether those systems are moving the needle</span>.</p>
+        <p><strong>Fractional Ops + Analytics</strong> — ongoing retainer, 3–6 months.</p>
+        <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg embedded as the analytics and insight partner. Weekly syncs between both so operational improvements are measured and visible. The client gets clean systems <em>and</em> a feedback loop that shows whether those systems are moving the needle.</p>
         <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
-        <div class="positioning-data"><span class="changed">"One integrated fractional team. No coordination tax for you." → "One integrated fractional team. Your ops get smarter as the data comes in."</span></div>
+        <div class="positioning-data">"One integrated fractional team. Your ops get smarter as the data comes in."</div>
 
-        <!-- DROPDOWN P2 -->
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg2', this)">
             <span class="arrow">▼</span> Package Details
@@ -336,11 +283,10 @@
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p><strong>Targeted Engagements for Cohorts</strong> — accelerators, CleanTech Open, food systems cohort programs.</p>
-        <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a <span class="changed">RevOps/GTM audit → data and metrics audit —</span> <span class="added">what are you measuring, what are you missing, and what story does your data tell right now?</span> Each startup leaves with a prioritized roadmap for both. Some convert to ongoing retainers.</p>
+        <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a data and metrics audit — what are you measuring, what are you missing, and what story does your data tell right now? Each startup leaves with a prioritized roadmap for both. Some convert to ongoing retainers.</p>
         <p>Sold to accelerator program managers as a value-add for their cohort.</p>
-        <div class="positioning-data"><span class="changed">"Two experts. One session. A clear path forward." → "Two experts. One session. You leave knowing what to fix and what to measure."</span></div>
+        <div class="positioning-data">"Two experts. One session. You leave knowing what to fix and what to measure."</div>
 
-        <!-- DROPDOWN P3 -->
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg3', this)">
             <span class="arrow">▼</span> Package Details
@@ -373,9 +319,7 @@
 
 <script>
   function togglePkg(id, btn) {
-    const details = document.getElementById(id);
-    const isOpen = details.classList.contains('open');
-    details.classList.toggle('open');
+    document.getElementById(id).classList.toggle('open');
     btn.classList.toggle('open');
   }
 </script>
