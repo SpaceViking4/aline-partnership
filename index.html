@@ -40,8 +40,7 @@
     border-bottom: 2px solid #2a2a4a;
   }
   th.label-col { width: 14%; color: #7a7a9a; background: #0d0d18; }
-  th.revops-col { width: 43%; color: #a78bfa; background: #13132a; }
-  th.data-col { width: 43%; color: #34d399; background: #0d1f1a; }
+  th.data-col { width: 86%; color: #34d399; background: #0d1f1a; }
   tr.section-row td {
     padding: 20px 18px;
     vertical-align: top;
@@ -55,8 +54,7 @@
     color: #7a7a9a;
     padding-top: 22px;
   }
-  td.revops { background: #13132a; border-left: 3px solid #a78bfa; padding-left: 20px; }
-  td.data   { background: #0d1f1a; border-left: 3px solid #34d399; padding-left: 20px; }
+  td.data { background: #0d1f1a; border-left: 3px solid #34d399; padding-left: 20px; }
   .tag {
     display: inline-block;
     font-size: 10px;
@@ -67,16 +65,7 @@
     border-radius: 4px;
     margin-bottom: 10px;
   }
-  .tag-revops { background: rgba(167,139,250,0.15); color: #a78bfa; }
-  .tag-data   { background: rgba(52,211,153,0.15);  color: #34d399; }
-  .positioning {
-    margin-top: 12px;
-    font-style: italic;
-    color: #a0a0c0;
-    font-size: 13px;
-    border-left: 2px solid #2a2a4a;
-    padding-left: 10px;
-  }
+  .tag-data { background: rgba(52,211,153,0.15); color: #34d399; }
   .positioning-data {
     margin-top: 12px;
     font-style: italic;
@@ -159,8 +148,7 @@
   <thead>
     <tr>
       <th class="label-col"></th>
-      <th class="revops-col">RevOps Framing</th>
-      <th class="data-col">Data, Analytics &amp; Insight Framing</th>
+      <th class="data-col">Data, Analytics &amp; Insight</th>
     </tr>
   </thead>
   <tbody>
@@ -168,12 +156,6 @@
     <!-- NATURAL BUYER -->
     <tr class="section-row">
       <td class="label"><div class="section-label-text">Natural<br>Buyer</div></td>
-      <td class="revops">
-        <span class="tag tag-revops">RevOps</span>
-        <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their go-to-market at the same time.</p>
-        <p>Aline gets the internal house in order. Greg builds the revenue infrastructure — CRM, pipeline visibility, sales/marketing/CS alignment.</p>
-        <p><strong>She's the internal engine. Greg is the external growth system.</strong></p>
-      </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p>A pre-seed to Series A climate or food systems founder who just closed a round (or is about to), has a scrappy team drowning in chaos, and needs to professionalize <em>both</em> their operations and their decision-making at the same time.</p>
@@ -185,20 +167,12 @@
     <!-- PACKAGE 1 -->
     <tr class="section-row">
       <td class="label"><div class="section-label-text">Package<br>One<br><br>"Mission<br>to Market"</div></td>
-      <td class="revops">
-        <span class="tag tag-revops">RevOps</span>
-        <p><strong>Full-Stack Readiness</strong> — for founders preparing to raise or just post-raise.</p>
-        <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the revenue infrastructure: CRM setup, lead lifecycle, outreach sequencing, pipeline visibility.</p>
-        <p>Deliverable: a founder who can walk into a Series A conversation with clean ops <em>and</em> a functioning GTM.</p>
-        <div class="positioning">"You're fundable. Now let's make you operable and scalable."</div>
-      </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p><strong>Full-Stack Readiness</strong> — for founders preparing to raise or just post-raise.</p>
         <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the data and metrics layer: impact KPIs, a founder dashboard, funnel analytics, and a data story the founder can walk into a Series A conversation with confidence.</p>
         <p>Deliverable: a founder with clean ops <em>and</em> a clear, defensible data narrative for investors and partners.</p>
         <div class="positioning-data">"You're fundable. Now let's give you the data to prove it."</div>
-
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg1', this)">
             <span class="arrow">▼</span> Package Details
@@ -229,20 +203,12 @@
     <!-- PACKAGE 2 -->
     <tr class="section-row">
       <td class="label"><div class="section-label-text">Package<br>Two<br><br>"Growth<br>Without<br>the Fires"</div></td>
-      <td class="revops">
-        <span class="tag tag-revops">RevOps</span>
-        <p><strong>Fractional RevOps + Ops</strong> — ongoing retainer, 3–6 months.</p>
-        <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg at a matching scope. Weekly syncs between both so nothing falls between ops and GTM. The client gets one integrated team, not two consultants who don't talk.</p>
-        <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
-        <div class="positioning">"One integrated fractional team. No coordination tax for you."</div>
-      </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p><strong>Fractional Ops + Analytics</strong> — ongoing retainer, 3–6 months.</p>
         <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg embedded as the analytics and insight partner. Weekly syncs between both so operational improvements are measured and visible. The client gets clean systems <em>and</em> a feedback loop that shows whether those systems are moving the needle.</p>
         <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
         <div class="positioning-data">"One integrated fractional team. Your ops get smarter as the data comes in."</div>
-
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg2', this)">
             <span class="arrow">▼</span> Package Details
@@ -273,20 +239,12 @@
     <!-- PACKAGE 3 -->
     <tr class="section-row">
       <td class="label"><div class="section-label-text">Package<br>Three<br><br>"Sector<br>Sprint"</div></td>
-      <td class="revops">
-        <span class="tag tag-revops">RevOps</span>
-        <p><strong>Targeted Engagements for Cohorts</strong> — accelerators, CleanTech Open, food systems cohort programs.</p>
-        <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a RevOps/GTM audit. Each startup gets a prioritized roadmap for both. Some convert to ongoing retainers.</p>
-        <p>Sold to accelerator program managers as a value-add for their cohort.</p>
-        <div class="positioning">"Two experts. One session. A clear path forward."</div>
-      </td>
       <td class="data">
         <span class="tag tag-data">Data / Insight</span>
         <p><strong>Targeted Engagements for Cohorts</strong> — accelerators, CleanTech Open, food systems cohort programs.</p>
         <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a data and metrics audit — what are you measuring, what are you missing, and what story does your data tell right now? Each startup leaves with a prioritized roadmap for both. Some convert to ongoing retainers.</p>
         <p>Sold to accelerator program managers as a value-add for their cohort.</p>
         <div class="positioning-data">"Two experts. One session. You leave knowing what to fix and what to measure."</div>
-
         <div class="pkg-toggle">
           <button class="pkg-toggle-btn" onclick="togglePkg('pkg3', this)">
             <span class="arrow">▼</span> Package Details
