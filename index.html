@@ -118,112 +118,68 @@
     padding: 0 2px;
   }
 
-  /* PACKAGE CARDS */
-  .packages-section {
-    margin-top: 48px;
+  /* DROPDOWN STYLES */
+  .pkg-toggle {
+    margin-top: 14px;
+    border-top: 1px solid #1a3a2a;
+    padding-top: 10px;
   }
-  .packages-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-  .packages-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.03em;
-  }
-  .toggle-btn {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid #2a2a4a;
-    color: #7a7a9a;
+  .pkg-toggle-btn {
+    background: none;
+    border: 1px solid #2a4a3a;
+    color: #34d399;
     font-size: 12px;
-    padding: 6px 14px;
+    padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     letter-spacing: 0.04em;
   }
-  .toggle-btn:hover { background: rgba(255,255,255,0.1); color: #e0e0f0; }
-  .packages-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .pkg-toggle-btn:hover { background: rgba(52,211,153,0.08); }
+  .pkg-toggle-btn .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
   }
-  .pkg-card {
-    background: #11111f;
-    border: 1px solid #1e1e3a;
-    border-radius: 10px;
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
+  .pkg-toggle-btn.open .arrow { transform: rotate(180deg); }
+  .pkg-details {
+    display: none;
+    margin-top: 14px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #1a3a2a;
   }
-  .pkg-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-  }
-  .pkg-card.p1::before { background: linear-gradient(90deg, #a78bfa, #34d399); }
-  .pkg-card.p2::before { background: linear-gradient(90deg, #34d399, #60a5fa); }
-  .pkg-card.p3::before { background: linear-gradient(90deg, #60a5fa, #f472b6); }
-  .pkg-name {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #7a7a9a;
-    margin-bottom: 4px;
-  }
-  .pkg-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 4px;
-  }
-  .pkg-type {
-    font-size: 12px;
-    color: #5a5a7a;
-    margin-bottom: 16px;
-    font-style: italic;
-  }
-  .pkg-who {
-    font-size: 12px;
-    color: #a0a0c0;
-    margin-bottom: 16px;
-    line-height: 1.6;
-    border-left: 2px solid #1e1e3a;
-    padding-left: 10px;
-  }
-  .pkg-row {
-    margin-bottom: 14px;
-  }
+  .pkg-details.open { display: block; }
+  .pkg-row { margin-bottom: 12px; }
+  .pkg-row:last-child { margin-bottom: 0; }
   .pkg-row-label {
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .pkg-row-label.aline { color: #a78bfa; }
   .pkg-row-label.greg  { color: #34d399; }
   .pkg-row-label.deliverable { color: #60a5fa; }
   .pkg-row p {
-    font-size: 13px;
+    font-size: 12px;
     color: #c0c0d8;
     margin: 0;
     line-height: 1.6;
   }
   .pkg-price {
-    margin-top: 18px;
-    padding-top: 14px;
-    border-top: 1px solid #1e1e3a;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #1a3a2a;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
   }
   .pkg-price-amount {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: #ffffff;
   }
@@ -232,7 +188,7 @@
     color: #5a5a7a;
   }
   .pkg-tagline {
-    margin-top: 12px;
+    margin-top: 10px;
     font-style: italic;
     font-size: 12px;
     color: #34d399;
@@ -293,6 +249,32 @@
         <p>Aline consolidates SOPs, tools, and team workflows. Greg builds the <span class="changed">revenue infrastructure: CRM setup, lead lifecycle, outreach sequencing, pipeline visibility → data and metrics layer:</span> <span class="added">impact KPIs, a founder dashboard, funnel analytics, and a data story the founder can walk into a Series A conversation with confidence.</span></p>
         <p>Deliverable: a founder with clean ops <em>and</em> a <span class="changed">functioning GTM → clear, defensible data narrative for investors and partners</span>.</p>
         <div class="positioning-data"><span class="changed">"You're fundable. Now let's make you operable and scalable." → "You're fundable. Now let's give you the data to prove it."</span></div>
+
+        <!-- DROPDOWN P1 -->
+        <div class="pkg-toggle">
+          <button class="pkg-toggle-btn" onclick="togglePkg('pkg1', this)">
+            <span class="arrow">▼</span> Package Details
+          </button>
+          <div class="pkg-details" id="pkg1">
+            <div class="pkg-row">
+              <div class="pkg-row-label deliverable">Deliverable</div>
+              <p>A founder who walks into a Series A with clean ops and a clear, evidence-backed story about what's working and why.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label aline">Aline Does</div>
+              <p>Consolidates SOPs, rationalizes the tool stack, documents workflows so the team stops reinventing the wheel.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label greg">Greg Does</div>
+              <p>Builds the data and metrics layer — impact KPIs, founder dashboard, funnel analytics — and assembles a defensible data narrative for investor conversations.</p>
+            </div>
+            <div class="pkg-price">
+              <div class="pkg-price-amount">$8,000 – $15,000</div>
+              <div class="pkg-price-note">one-time · 4–8 weeks</div>
+            </div>
+            <div class="pkg-tagline">"You're fundable. Now let's give you the data to prove it."</div>
+          </div>
+        </div>
       </td>
     </tr>
 
@@ -312,6 +294,32 @@
         <p>Paired fractional engagement — Aline at her Kickstart or Partner tier, Greg <span class="changed">at a matching scope → embedded as the analytics and insight partner</span>. Weekly syncs between both so <span class="changed">nothing falls between ops and GTM → operational improvements are measured and visible</span>. The client gets <span class="changed">one integrated team, not two consultants who don't talk → clean systems <em>and</em> a feedback loop that shows whether those systems are moving the needle</span>.</p>
         <p>Pricing: bundled at a slight discount vs. hiring each separately; each maintains own client contract.</p>
         <div class="positioning-data"><span class="changed">"One integrated fractional team. No coordination tax for you." → "One integrated fractional team. Your ops get smarter as the data comes in."</span></div>
+
+        <!-- DROPDOWN P2 -->
+        <div class="pkg-toggle">
+          <button class="pkg-toggle-btn" onclick="togglePkg('pkg2', this)">
+            <span class="arrow">▼</span> Package Details
+          </button>
+          <div class="pkg-details" id="pkg2">
+            <div class="pkg-row">
+              <div class="pkg-row-label deliverable">Deliverable</div>
+              <p>One integrated fractional team. The client stops carrying the coordination burden between ops and data.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label aline">Aline Does</div>
+              <p>Embedded fractional ops partner (10–15 hrs/week) — holds the operational picture, keeps systems running and evolving.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label greg">Greg Does</div>
+              <p>Embedded analytics and insight partner — periodic dashboard cadence, measures whether Aline's systems are moving the needle, surfaces what the data says to do next.</p>
+            </div>
+            <div class="pkg-price">
+              <div class="pkg-price-amount">$5,000 – $8,000<span style="font-size:11px;font-weight:400;">/mo</span></div>
+              <div class="pkg-price-note">retainer · 3–6 months minimum</div>
+            </div>
+            <div class="pkg-tagline">"Your ops get smarter as the data comes in."</div>
+          </div>
+        </div>
       </td>
     </tr>
 
@@ -331,109 +339,44 @@
         <p>Joint workshop or engagement for 4–6 startups. Aline runs an ops diagnostic; Greg runs a <span class="changed">RevOps/GTM audit → data and metrics audit —</span> <span class="added">what are you measuring, what are you missing, and what story does your data tell right now?</span> Each startup leaves with a prioritized roadmap for both. Some convert to ongoing retainers.</p>
         <p>Sold to accelerator program managers as a value-add for their cohort.</p>
         <div class="positioning-data"><span class="changed">"Two experts. One session. A clear path forward." → "Two experts. One session. You leave knowing what to fix and what to measure."</span></div>
+
+        <!-- DROPDOWN P3 -->
+        <div class="pkg-toggle">
+          <button class="pkg-toggle-btn" onclick="togglePkg('pkg3', this)">
+            <span class="arrow">▼</span> Package Details
+          </button>
+          <div class="pkg-details" id="pkg3">
+            <div class="pkg-row">
+              <div class="pkg-row-label deliverable">Deliverable</div>
+              <p>Each startup leaves with a prioritized roadmap covering both operations and analytics. Some convert to ongoing retainers.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label aline">Aline Does</div>
+              <p>Runs an ops diagnostic — where are your workflows broken, where is the tool sprawl, what decisions aren't being systematized.</p>
+            </div>
+            <div class="pkg-row">
+              <div class="pkg-row-label greg">Greg Does</div>
+              <p>Runs a data and metrics audit — what are you measuring, what are you missing, and what story does your data tell right now.</p>
+            </div>
+            <div class="pkg-price">
+              <div class="pkg-price-amount">$3,500 – $6,000</div>
+              <div class="pkg-price-note">per cohort · sold to the program</div>
+            </div>
+            <div class="pkg-tagline">"You leave knowing what to fix and what to measure."</div>
+          </div>
+        </div>
       </td>
     </tr>
 
   </tbody>
 </table>
 
-<!-- PACKAGE CARDS SECTION -->
-<div class="packages-section">
-  <div class="packages-header">
-    <div class="packages-title">Package Details</div>
-    <button class="toggle-btn" onclick="togglePackages()">Hide</button>
-  </div>
-  <div class="packages-grid" id="packagesGrid">
-
-    <!-- PACKAGE 1 CARD -->
-    <div class="pkg-card p1">
-      <div class="pkg-name">Package One</div>
-      <div class="pkg-title">Mission to Market</div>
-      <div class="pkg-type">One-time engagement · 4–8 weeks</div>
-      <div class="pkg-who">For founders preparing to raise or just post-raise who need to professionalize both their internal operations and their data story at the same time.</div>
-      <div class="pkg-row">
-        <div class="pkg-row-label deliverable">Deliverable</div>
-        <p>A founder who walks into a Series A with clean ops and a clear, evidence-backed story about what's working and why.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label aline">Aline does</div>
-        <p>Consolidates SOPs, rationalizes the tool stack, documents workflows so the team stops reinventing the wheel.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label greg">Greg does</div>
-        <p>Builds the data and metrics layer — impact KPIs, founder dashboard, funnel analytics — and assembles a defensible data narrative for investor conversations.</p>
-      </div>
-      <div class="pkg-price">
-        <div class="pkg-price-amount">$8,000 – $15,000</div>
-        <div class="pkg-price-note">depending on org size &amp; scope</div>
-      </div>
-      <div class="pkg-tagline">"You're fundable. Now let's give you the data to prove it."</div>
-    </div>
-
-    <!-- PACKAGE 2 CARD -->
-    <div class="pkg-card p2">
-      <div class="pkg-name">Package Two</div>
-      <div class="pkg-title">Growth Without the Fires</div>
-      <div class="pkg-type">Ongoing retainer · 3–6 months minimum</div>
-      <div class="pkg-who">For founders past the chaos triage stage but still making decisions in the dark — operational systems exist but aren't generating insight.</div>
-      <div class="pkg-row">
-        <div class="pkg-row-label deliverable">Deliverable</div>
-        <p>One integrated fractional team. The client stops carrying the coordination burden between ops and data.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label aline">Aline does</div>
-        <p>Embedded fractional ops partner (10–15 hrs/week) — holds the operational picture, keeps systems running and evolving.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label greg">Greg does</div>
-        <p>Embedded analytics and insight partner — periodic dashboard cadence, measures whether Aline's systems are moving the needle, surfaces what the data says to do next.</p>
-      </div>
-      <div class="pkg-price">
-        <div class="pkg-price-amount">$5,000 – $8,000<span style="font-size:11px;font-weight:400;">/mo</span></div>
-        <div class="pkg-price-note">combined · separate contracts</div>
-      </div>
-      <div class="pkg-tagline">"Your ops get smarter as the data comes in."</div>
-    </div>
-
-    <!-- PACKAGE 3 CARD -->
-    <div class="pkg-card p3">
-      <div class="pkg-name">Package Three</div>
-      <div class="pkg-title">Sector Sprint</div>
-      <div class="pkg-type">Single engagement · sold to accelerators</div>
-      <div class="pkg-who">For accelerator program managers who want to give their cohort of 4–6 startups a structured diagnostic from two complementary experts in one session.</div>
-      <div class="pkg-row">
-        <div class="pkg-row-label deliverable">Deliverable</div>
-        <p>Each startup leaves with a prioritized roadmap covering both operations and analytics. Some convert to ongoing retainers.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label aline">Aline does</div>
-        <p>Runs an ops diagnostic — where are your workflows broken, where is the tool sprawl, what decisions aren't being systematized.</p>
-      </div>
-      <div class="pkg-row">
-        <div class="pkg-row-label greg">Greg does</div>
-        <p>Runs a data and metrics audit — what are you measuring, what are you missing, and what story does your data tell right now.</p>
-      </div>
-      <div class="pkg-price">
-        <div class="pkg-price-amount">$3,500 – $6,000</div>
-        <div class="pkg-price-note">per cohort · sold to the program</div>
-      </div>
-      <div class="pkg-tagline">"You leave knowing what to fix and what to measure."</div>
-    </div>
-
-  </div>
-</div>
-
 <script>
-  function togglePackages() {
-    const grid = document.getElementById('packagesGrid');
-    const btn = document.querySelector('.toggle-btn');
-    if (grid.style.display === 'none') {
-      grid.style.display = 'grid';
-      btn.textContent = 'Hide';
-    } else {
-      grid.style.display = 'none';
-      btn.textContent = 'Show Package Details';
-    }
+  function togglePkg(id, btn) {
+    const details = document.getElementById(id);
+    const isOpen = details.classList.contains('open');
+    details.classList.toggle('open');
+    btn.classList.toggle('open');
   }
 </script>
 
